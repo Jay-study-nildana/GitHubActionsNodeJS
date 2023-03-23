@@ -4,7 +4,10 @@
   "description": "Node JS Hello World",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "build": "babel src -d dist",
+    "start": "npm run build && node dist",
+    "restart": "rimraf dist && npm run start",
+    "dev": "nodemon --exec npm run restart"
   },
   "keywords": [
     "nodejs"

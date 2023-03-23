@@ -7,10 +7,8 @@ import cors from "cors";
  *  Example of using ES6 syntectic sugar to create Express JS server
  */
 class ExpressServer {
-  constructor(hostname =process.env.HOST, port= process.env.PORT) {
+  constructor() {
     this.serverName = 'Express Server API';
-    this.hostname = hostname;
-    this.port = port;
 
     //Auto Start Server
     this.initServer()
@@ -103,7 +101,7 @@ class ExpressServer {
       })
 
     //Start Listening
-    this.server.listen(this.port, () => {
+    this.server.listen(process.env.PORT, () => {
       console.log(`${this.serverName} Started at http://${this.hostname}:${this.port}/`);
     })
   }

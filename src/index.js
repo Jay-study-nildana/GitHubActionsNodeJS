@@ -14,10 +14,10 @@ dotenv.config()
 //use one of the two servers below.
 
 // Start Node Server
-const WebServer = new NodeServer(); //for basic website style
+//const WebServer = new NodeServer(); //for basic website style
 
 //Start Express JS Server
-const expressServer = new ExpressServer(); //for api server style
+//const expressServer = new ExpressServer(); //for api server style
 
 //start BootStrap site.
 const bootStrapServer = new BootStrapServer();

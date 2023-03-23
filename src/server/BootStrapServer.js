@@ -6,7 +6,7 @@ import path from "path" //for loading files from a path. serve bootstrap site fo
  *  Example of using ES6 syntectic sugar to create Express JS server
  */
 class BootStrapServer {
-  constructor(hostname =process.env.LOCAL_HOST, port= process.env.DEFAULT_PORT4) {
+  constructor(hostname =process.env.HOST, port= process.env.PORT ) {
     this.serverName = 'Bootstrap Server';
     this.hostname = hostname;
     this.port = port;

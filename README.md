@@ -4,6 +4,20 @@ Node JS Hello World.
 
 note: project borrowed from, https://github.com/Jay-study-nildana/NodeJSForStudents/tree/main/NodeJSHelloWorld
 
+# web.config IMPORTANT
+
+after each deployment, the web.config file is overwritten by github actions. So, the app will stop working. So, until I find a better solution, TODO, you need to update this specific line using Kudu Console.
+
+PRESENT, after deployment.
+
+```
+    <action type="Rewrite" url="index.js"/>
+```
+AFTER (your changes), as the final files are in the dist folder.
+```
+    <action type="Rewrite" url="dist/index.js"/>
+```
+
 # things to remember
 
 1. you would learn much more about the deployment complexities if you compare the above linked 'localhost' only project with this project, which has been modified for localhost and also deployment.
